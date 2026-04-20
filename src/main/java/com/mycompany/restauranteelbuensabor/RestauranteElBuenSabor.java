@@ -19,13 +19,23 @@ public class RestauranteElBuenSabor {
        
    }
     
-     public static void mostrarMenu(){
+    public static void mostrarMenu(){
         
-            System.out.println("\n--- SISTEMA DE GESTIÓN: " + Datos.nombreRestaurante + " ---");
-            System.out.println("1. Ver Carta");
-            System.out.println("2. Registrar Pedido");
-            System.out.println("3. Generar Factura");
-            System.out.println("4. Salir");
+        System.out.println("\n--- SISTEMA DE GESTIÓN: " + Datos.nombreRestaurante + " ---");
+        System.out.println("1. Ver Carta");
+        System.out.println("2. Registrar Pedido");
+        System.out.println("3. Generar Factura");
+        System.out.println("4. Salir");
+    }
+    
+    public static int leerEntero(String mensaje){
+        
+        System.out.println(mensaje);
+        
+        while (!sc.hasNextInt()) {            
+            System.out.println("Por favor ingrese un numero valido: ");
         }
+      return sc.nextInt();
+    }
         
 }   

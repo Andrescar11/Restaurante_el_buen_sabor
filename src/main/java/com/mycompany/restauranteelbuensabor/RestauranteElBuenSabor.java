@@ -62,4 +62,21 @@ public class RestauranteElBuenSabor {
         
     }
     
+    private static void gestionarPedido(){
+        
+        int mesa = leerEntero("Ingrese numero de mesa: ");
+        datos.setNumeroMesa(mesa);
+        
+        Imprimir.mostrarCarta(datos.getMenu());
+        int item = leerEntero("Seleccione el numero del plato (0 para terminar)");
+        
+        while (item>0 && item <=datos.getMenu().size()) {            
+            
+            int cantidad = leerEntero("Cantidad: ");
+            datos.getMenu().get(item-1).agregarCantidad(cantidad);
+            item= leerEntero("Seleccione otro plato(0 para terminar)");
+            
+        }
+    }
+    
 }   

@@ -71,5 +71,16 @@ public class Imprimir {
         }
     }
     
-    
+    public static void imprimirTotales(double subtotal, double iva, double total) {
+        
+        System.out.println(lineaSimple);
+        System.out.printf("%-27s $%,.0f%n", "Subtotal con desc:", subtotal);
+        System.out.printf("%-27s $%,.0f%n", "IVA (19%):", iva);
+        System.out.println(lineaSimple);
+        System.out.printf("%-27s $%,.0f%n", "TOTAL:", total);
+        System.out.println(separador);
+        System.out.println("Gracias por su visita!");
+        System.out.println(separador);
+        
+    }
 }

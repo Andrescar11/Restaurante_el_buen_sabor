@@ -79,4 +79,15 @@ public class RestauranteElBuenSabor {
         }
     }
     
+    public static void procesarOpcion(int opcion){
+        
+        switch (opcion) {
+            case 1 -> Imprimir.mostrarCarta(datos.getMenu());
+            case 2 -> gestionarPedido();
+            case 3 -> gestionarFacturacion();
+            case 4 -> System.out.println("Saliendo del sistema...");
+            default -> System.out.println("Opción no válida.");
+        }
+    }
+    
 }   

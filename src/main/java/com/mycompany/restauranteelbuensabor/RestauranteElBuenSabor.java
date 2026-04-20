@@ -11,17 +11,21 @@ import java.util.Scanner;
  * @author alfre
  */
 public class RestauranteElBuenSabor {
-
-    public static void mostrarMenu(){
+    
+    private static final Scanner sc = new Scanner(System.in);
+    private static final Datos datos = new Datos();
+    
+    public static void main(String[] args) {
+       
+   }
+    
+     public static void mostrarMenu(){
         
-        System.out.println("\n--- SISTEMA DE GESTIÓN: " + Datos.nombreRestaurante + " ---");
-        System.out.println("1. Ver Carta");
-        System.out.println("2. Registrar Pedido");
-        System.out.println("3. Generar Factura");
-        System.out.println("4. Salir");
+            System.out.println("\n--- SISTEMA DE GESTIÓN: " + Datos.nombreRestaurante + " ---");
+            System.out.println("1. Ver Carta");
+            System.out.println("2. Registrar Pedido");
+            System.out.println("3. Generar Factura");
+            System.out.println("4. Salir");
+        }
         
-    }
-    
-    
-    
-}
+}   

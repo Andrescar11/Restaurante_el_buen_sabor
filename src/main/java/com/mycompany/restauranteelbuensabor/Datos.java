@@ -17,4 +17,9 @@ public class Datos {
     public static final double ivaPorcentaje = 0.19;
     public static final double umbralDescuento = 50000;
     
+    //lista de objetos para evitar uso de arreglos paralelos
+    private List<Producto> menu;
+    private int numeroMesa;
+    private int numeroFactura;
+    private boolean mesaActiva;
 }

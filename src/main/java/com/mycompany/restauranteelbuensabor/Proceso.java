@@ -38,4 +38,13 @@ public class Proceso {
         return subtotal;
     }
     
+    /**
+     * Calcula el valor del IVA sobre un monto dado.
+     */
+    
+    public static double calcularIva(double monto){
+        
+        return monto*Datos.ivaPorcentaje;
+        
+    }
 }

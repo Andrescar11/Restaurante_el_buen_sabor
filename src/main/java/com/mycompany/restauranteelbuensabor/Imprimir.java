@@ -31,4 +31,22 @@ public class Imprimir {
         }
     }
     
+     public static void mostrarPedido(List<Producto> menu){
+
+        System.out.println("\n--- PEDIDO ACTUAL ---");
+        double subtotal = 0;
+
+        for (Producto producto : menu) {
+
+            if (producto.getCantidad()>0) {
+                double parcial = producto.getCantidad() * producto.getPrecio();
+                System.out.printf(formatoFila, producto.getNombre(), producto.getCantidad(), parcial);
+                subtotal+=parcial;
+            }
+
+        }
+        System.out.println(lineaSimple);
+        System.out.printf("%-27s $%,.0f%n", "Subtotal:", subtotal);
+    }
+    
 }

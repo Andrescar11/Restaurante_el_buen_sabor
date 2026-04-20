@@ -48,5 +48,17 @@ public class Imprimir {
         System.out.println(lineaSimple);
         System.out.printf("%-27s $%,.0f%n", "Subtotal:", subtotal);
     }
+     
+     public static void imprimirCuerpoCabecera(int numeroFactura){
+        
+        System.out.println(separador);
+        System.out.println("    " + Datos.nombreRestaurante);
+        System.out.println("    Calle 15 #8-32, Valledupar");
+        System.out.println("    NIT: " + Datos.NIT);
+        System.out.println(separador);
+        System.out.printf("FACTURA No. %03d%n", numeroFactura);
+        System.out.println(lineaSimple); 
+        
+    }
     
 }

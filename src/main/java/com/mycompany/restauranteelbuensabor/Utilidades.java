@@ -26,4 +26,17 @@ public class Utilidades {
         return false;
     }
     
+    /**
+     * Reinicia todas las cantidades del menú y el estado de la mesa.
+     */
+    
+    public static void reiniciarEstado(List<Producto> menu, Datos datos){
+        for (Producto producto : menu) {
+            producto.reiniciarCantidad();
+        }
+    }
+    
+    // El método calcular() con 7 parámetros ha sido ELIMINADO.
+    // Esa lógica ahora pertenece a la clase Proceso o al objeto Factura.
+    
 }

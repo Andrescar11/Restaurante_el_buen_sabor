@@ -37,5 +37,29 @@ public class RestauranteElBuenSabor {
         }
       return sc.nextInt();
     }
+       
+    private static void gestionarFacturacion(){
         
+        if (!Utilidades.tieneProductoSeleccionados(datos.getMenu())) {
+            System.out.println("Error: No hay productos registrados para esta mesa");
+            return;
+        }
+        
+        // Delegamos los cálculos a la clase Proceso
+        double subtotal = Proceso.calcularSubtotal(datos.getMenu());
+        double subtotalConDesc = Proceso.aplicarDescuento(subtotal);
+        double iva = Proceso.calcularIva(subtotalConDesc);
+        double total = subtotalConDesc + iva;
+        
+        //Delegamos la impresion a la clase imprimir
+        Imprimir.imprimirCuerpoCabecera(datos.getNumeroFactura());
+        Imprimir.imprimirFactura(datos.getMenu());
+        Imprimir.imprimirTotales(subtotal, iva, total);
+        
+        //Actualizamos estado
+        datos.incrementarFactura();
+        Utilidades.reiniciarEstado(datos.getMenu(), datos);
+        
+    }
+    
 }   

@@ -17,6 +17,14 @@ public class RestauranteElBuenSabor {
     
     public static void main(String[] args) {
        
+        int opcion;
+        
+        do {  
+            mostrarMenu();
+            opcion = leerEntero("Seleccione una opcion");
+            procesarOpcion(opcion);
+            
+        } while (opcion!=4);
    }
     
     public static void mostrarMenu(){

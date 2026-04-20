@@ -36,4 +36,13 @@ public class Datos {
         menu.add(new Producto("Agua Panela", 3500));
         menu.add(new Producto("Arroz con Pollo", 25000));
     }
+    
+    // Getters con nombres que revelan intención
+    public List<Producto> getMenu() { return menu; }
+    public int getNumeroFactura() { return numeroFactura; }
+    public void incrementarFactura() { this.numeroFactura++; }
+    
+    public int getNumeroMesa() { return numeroMesa; }
+    public void setNumeroMesa(int numeroMesa) { this.numeroMesa = numeroMesa; }
+    
 }

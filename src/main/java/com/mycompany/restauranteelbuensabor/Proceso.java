@@ -26,4 +26,16 @@ public class Proceso {
         return subtotal;
     }
     
+      /**
+     * Aplica un descuento si el subtotal supera el umbral definido.
+     */
+    
+    public static double aplicarDescuento(double subtotal){
+        
+        if (subtotal>Datos.umbralDescuento) {
+            return subtotal*0.95;
+        }
+        return subtotal;
+    }
+    
 }

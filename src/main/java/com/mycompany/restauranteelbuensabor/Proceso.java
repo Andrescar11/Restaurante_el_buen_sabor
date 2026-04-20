@@ -47,4 +47,17 @@ public class Proceso {
         return monto*Datos.ivaPorcentaje;
         
     }
+    
+        /**
+     * Coordina el cálculo total. 
+     * Nota: Ya no modifica variables globales (Sin efectos secundarios).
+     */
+    
+    public static double obtenerTotalFactura(List<Producto> productos) {
+        double subtotal = calcularSubtotal(productos);
+        double subtotalConDescuento = aplicarDescuento(subtotal);
+        double iva = calcularIva(subtotalConDescuento);
+        
+        return subtotalConDescuento + iva;
+    }
 }

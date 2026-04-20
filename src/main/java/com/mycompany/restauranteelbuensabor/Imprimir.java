@@ -60,5 +60,16 @@ public class Imprimir {
         System.out.println(lineaSimple); 
         
     }
+     
+    public static void imprimirFactura(List<Producto> menu){
+        
+        for (Producto producto : menu) {
+            if (producto.getCantidad()>0) {
+                double parcial = producto.getPrecio() * producto.getCantidad();
+                System.out.printf(formatoFila, producto.getNombre(),producto.getCantidad(),parcial);
+            }
+        }
+    }
+    
     
 }
